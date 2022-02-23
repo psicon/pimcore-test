@@ -7,7 +7,7 @@
     }) }}
 {% else %}
     {% set customers = pimcore_relations("customers").getData() %}
-    <div class="customergrid">
+    <div class="container">
         {% for customer in customers %}
             {% if customer.name|length > 0 %}
                 <h1 class="customerheader">Hallo {{ customer.name }} aus {{ customer.city }}</h1>
