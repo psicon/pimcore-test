@@ -1,0 +1,38 @@
+.hotels {
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    color: $primary;
+
+    h2.flwd-by-img {
+        margin-top: 4.23mm;
+    }
+
+    &.is--container {
+        max-width: 110mm;
+    }
+
+    &-subheadline {
+        display: flex;
+        align-items: center;
+
+        &-icon {
+            width: 1cm;
+            margin-right: 3.23mm;
+        }
+    }
+
+    &-image {
+        border: $std-border-width solid $gray-divider;
+    }
+
+    p {
+        &:first-child {
+            margin-top: 0;
+        }
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+}

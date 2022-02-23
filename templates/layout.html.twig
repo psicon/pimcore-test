@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Example</title>
+    <link rel="stylesheet" type="text/css" href="/static/css/global.css" />
+</head>
+<body>
+   
+<main>
+    {#  
+        choose a project wide unique name to dis-/allow elements in your areablock 
+        through the toolbox configuration (see section "allow/disallow elements" below
+     #}
+    {{ pimcore_areablock('mainContentBlock', toolbox_areablock_config('mainContentBlock')) }}
+    {#{{ pimcore_areablock('mainContentBlock2', toolbox_areablock_config('mainContentBlock2')) }}#} 
+
+</main>
+    
+</body>
+</html>

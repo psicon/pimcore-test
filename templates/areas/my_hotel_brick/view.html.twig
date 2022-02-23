@@ -1,0 +1,25 @@
+<div class="my-brick {{ additionalClassesData|join(' ') }}">
+    <h1>{{ pimcore_input('headline', {'width': 540}) }}</h1>
+</div>
+
+{% if editmode %}
+    {{ pimcore_relations("hotels", {
+        "types": ["object"],
+        "subtypes": {
+            "object": ["object"],
+        }
+    }) }}
+{% else %}
+    {% set hotels = pimcore_relations("hotels").getData() %}
+    <div class="hotelgrid">
+        {% for hotel in hotels %}
+            {% if hotel.name|length > 0 %}
+                <p>{{ hotel.name }} - {{ hotel.stars }} Sterne</p>
+                <p>{{ hotel.description }}</p>
+                {% for roomblocks in hotel.roomblock %}
+                    <p>Zimmer: {{ roomblocks.roomno.getData() }} </p> 
+                {% endfor %}
+           {% endif %}
+        {% endfor %}
+    </div>
+{% endif %}

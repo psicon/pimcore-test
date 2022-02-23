@@ -1,0 +1,25 @@
+.header {
+    height: 6.5%;
+    width: $page-width;
+    padding: 10.94mm $page-padding-right 0 $page-padding-left;
+
+    &.hidden {
+        display: none;
+
+        & + .content {
+            height: calc(#{$content-height} + 20.14mm);
+            padding-top: 16.41mm;
+
+            &.fullscreen {
+                height: $page-height;
+            }
+        }
+    }
+}
+
+.page-right {
+    .header {
+        padding-left: $page-padding-right;
+        padding-right: $page-padding-left;
+    }
+}

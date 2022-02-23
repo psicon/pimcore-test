@@ -1,0 +1,73 @@
+.footer {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    justify-content: flex-end;
+    font-family: $font-family-regular;
+    height: 4.7%;
+    // margin-top: -0.25mm;
+    box-sizing: border-box;
+    border-top: .2mm solid $primary;
+    overflow: hidden;
+    margin-top: auto;
+
+
+    &-text {
+        line-height: 1;
+        display: flex;
+        align-items: center;
+        height: 100%;
+        padding-bottom: $page-trim;
+    }
+
+    &-chapter-number,
+    &-note {
+        color: $gray;
+        font-style: normal;
+        font-weight: 300;
+        font-size: 3.35mm;
+    }
+
+    &-chapter-number {
+        font-family: $font-family-bold;
+        color: $gray-dark;
+        margin-right: 1.41mm;
+    }
+
+    &-page-number {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 14.29mm;
+        height: 100%;
+        background-color: $primary;
+        color: white;
+        font-size: 3.88mm;
+        font-family: $font-family-bold;
+        padding-left: $page-trim;
+        padding-bottom: $page-trim;
+        margin-right: 4.59mm;
+    }
+
+    &.hidden {
+        display: none;
+    }
+}
+
+.page-right {
+    .footer {
+        flex-direction: row;
+
+        &-chapter-number {
+            margin-right: 1.41mm;
+            margin-left: 0;
+        }
+
+        &-page-number {
+            margin-right: 0;
+            margin-left: 4.59mm;
+            padding-left: 0;
+            padding-right: $page-trim;
+        }
+    }
+}
