@@ -1,4 +1,3 @@
-
 {% if editmode %}
     {{ pimcore_relations("customers", {
         "types": ["object"],
@@ -11,7 +10,7 @@
     <div class="customergrid">
         {% for customer in customers %}
             {% if customer.name|length > 0 %}
-                <h1>Hallo {{ customer.name }} aus {{ customer.city }}</h1>
+                <h1 class="customerheader">Hallo {{ customer.name }} aus {{ customer.city }}</h1>
                 
            {% endif %}
         {% endfor %}
