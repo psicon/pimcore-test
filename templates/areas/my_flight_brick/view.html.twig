@@ -1,0 +1,22 @@
+<div class="my-brick {{ additionalClassesData|join(' ') }}">
+    <h1>{{ pimcore_input('headline', {'width': 540}) }}</h1>
+</div>
+
+{% if editmode %}
+    {{ pimcore_relations("flights", {
+        "types": ["object"],
+        "subtypes": {
+            "object": ["object"],
+        }
+    }) }}
+{% else %}
+    {% set flights = pimcore_relations("flights").getData() %}
+    <div class="flightgrid">
+        {% for flight in flights %}
+            {% if flight.number|length > 0 %}
+                <p>{{ flight.number }} - {{ flight.airline }}</p>
+                
+           {% endif %}
+        {% endfor %}
+    </div>
+{% endif %}

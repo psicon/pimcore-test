@@ -14,12 +14,13 @@
     <div class="hotelgrid">
         {% for hotel in hotels %}
             {% if hotel.name|length > 0 %}
-                <p>{{ hotel.name }} - {{ hotel.stars }} Sterne</p>
+                <h3>{{ hotel.name }} - {{ hotel.stars }} Sterne</h3>
                 <p>{{ hotel.description }}</p>
                 {% for roomblocks in hotel.roomblock %}
-                    <p>Zimmer: {{ roomblocks.roomno.getData() }} </p> 
+                    <p><b>Zimmer:</b> {{ roomblocks.roomno.getData() }} </p> 
                 {% endfor %}
            {% endif %}
+           <hr>
         {% endfor %}
     </div>
 {% endif %}

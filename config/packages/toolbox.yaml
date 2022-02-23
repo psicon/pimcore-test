@@ -22,6 +22,22 @@ services:
                   id: my_hotel_brick,
                   title: "Hotel listing Brick",
               }
+    App\Document\Areabrick\FlightBrick:
+        parent: ToolboxBundle\Document\Areabrick\AbstractAreabrick
+        tags:
+            - {
+                  name: toolbox.area.simple_brick,
+                  id: my_flight_brick,
+                  title: "Flight listing Brick",
+              }
+    App\Document\Areabrick\CustomerBrick:
+        parent: ToolboxBundle\Document\Areabrick\AbstractAreabrick
+        tags:
+            - {
+                  name: toolbox.area.simple_brick,
+                  id: my_customer_brick,
+                  title: "Customer listing Brick",
+              }
 
               # for simple bricks
     app.brick.my_simple_brick_without_configurable_options:
