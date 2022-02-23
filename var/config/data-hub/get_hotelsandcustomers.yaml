@@ -1,0 +1,144 @@
+pimcore_data_hub:
+    configurations:
+        get_hotelsandcustomers:
+            general:
+                active: true
+                type: graphql
+                name: get_hotelsandcustomers
+                description: ''
+                group: ''
+                sqlObjectCondition: ''
+                modificationDate: 1645620313
+                path: null
+                createDate: 1645618881
+            schema:
+                queryEntities:
+                    hotels:
+                        id: hotels
+                        name: hotels
+                        columnConfig:
+                            columns:
+                                -
+                                    attributes:
+                                        attribute: name
+                                        label: Name
+                                        dataType: input
+                                        layout:
+                                            name: name
+                                            title: Name
+                                            tooltip: ''
+                                            mandatory: false
+                                            noteditable: false
+                                            index: false
+                                            locked: false
+                                            style: ''
+                                            permissions: null
+                                            datatype: data
+                                            fieldtype: input
+                                            relationType: false
+                                            invisible: false
+                                            visibleGridView: false
+                                            visibleSearch: false
+                                            width: ''
+                                            defaultValue: null
+                                            queryColumnType: varchar
+                                            columnType: varchar
+                                            columnLength: 190
+                                            regex: ''
+                                            unique: false
+                                            showCharCount: false
+                                            defaultValueGenerator: ''
+                                    isOperator: false
+                    customers:
+                        id: customers
+                        name: customers
+                        columnConfig:
+                            columns:
+                                -
+                                    attributes:
+                                        attribute: name
+                                        label: Name
+                                        dataType: input
+                                        layout:
+                                            name: name
+                                            title: Name
+                                            tooltip: ''
+                                            mandatory: false
+                                            noteditable: false
+                                            index: false
+                                            locked: false
+                                            style: ''
+                                            permissions: null
+                                            datatype: data
+                                            fieldtype: input
+                                            relationType: false
+                                            invisible: false
+                                            visibleGridView: false
+                                            visibleSearch: false
+                                            width: ''
+                                            defaultValue: null
+                                            queryColumnType: varchar
+                                            columnType: varchar
+                                            columnLength: 190
+                                            regex: ''
+                                            unique: false
+                                            showCharCount: false
+                                            defaultValueGenerator: ''
+                                    isOperator: false
+                mutationEntities: {  }
+                specialEntities:
+                    document:
+                        read: false
+                        create: false
+                        update: false
+                        delete: false
+                    document_folder:
+                        read: false
+                        create: false
+                        update: false
+                        delete: false
+                    asset:
+                        read: false
+                        create: false
+                        update: false
+                        delete: false
+                    asset_folder:
+                        read: false
+                        create: false
+                        update: false
+                        delete: false
+                    asset_listing:
+                        read: false
+                        create: false
+                        update: false
+                        delete: false
+                    object_folder:
+                        read: true
+                        create: false
+                        update: false
+                        delete: false
+            security:
+                method: datahub_apikey
+                apikey: b522cb11fca831c6a6387d6e715ea45d
+                skipPermissionCheck: false
+            workspaces:
+                asset: {  }
+                document: {  }
+                object:
+                    -
+                        read: true
+                        cpath: /customers
+                        create: false
+                        update: false
+                        delete: false
+                        id: extModel8531-2
+                    -
+                        read: true
+                        cpath: /hotels
+                        create: false
+                        update: false
+                        delete: false
+                        id: extModel8531-3
+            permissions:
+                user: {  }
+                role: {  }
